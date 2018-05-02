@@ -8,8 +8,12 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Nate\'s Film Site' });
 });
 
+router.get('/loggedinhome', function(req, res, next) {
+  res.render('index', { title: 'Nate\'s Film Site' });
+});
+
 router.post('/addFilm', function(req, res, next) {
-  
+
   res.redirect('/')
 });
 

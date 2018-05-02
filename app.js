@@ -10,6 +10,12 @@ var flash = require('express-flash');
 var mongoose = require('mongoose');
 var MongoDBStore = require('connect-mongodb-session')(session);
 
+var db_url = process.env.Mongo_Url;
+
+mongoose.connect(db_url)
+  .then( () => { console.log('Connected to mLab'); })
+  .catch( (err) => {console.log('Error connecting to mLab', err); });
+
 var index = require('./routes/index');
 var users = require('./routes/users');
 
