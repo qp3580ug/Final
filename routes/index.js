@@ -8,13 +8,8 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Nate\'s Film Site' });
 });
 
-router.get('/loggedinhome', function(req, res, next) {
-  res.render('index', { title: 'Nate\'s Film Site' });
-});
-
 router.post('/addFilm', function(req, res, next) {
-
-  res.redirect('/')
+  res.redirect('/loggedinhome')
 });
 
 router.get('/login', function(req, res, next) {
@@ -61,6 +56,10 @@ function isLoggedIn(req, res, next) {
 router.get('/logout', function(req, res, next) {
   req.logout();
   res.redirect('/');
+});
+
+router.get('/loggedinhome', function(req, res, next) {
+  res.render('index', { title: 'Nate\'s Film Site' });
 });
 
 module.exports = router;
