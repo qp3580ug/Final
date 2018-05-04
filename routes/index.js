@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var passport = require('passport');
+var film = require('../models/film');
 
 
 /* GET home page. */
@@ -9,7 +10,17 @@ router.get('/', function(req, res, next) {
 });
 
 router.post('/addFilm', function(req, res, next) {
-  res.redirect('/loggedinhome')
+  if (req.body.text) {
+    var Film = film(req.body);
+
+    Film.save().then( (Film) => {
+      res.redirect('/loggedinhome')
+    });
+  }
+  else {
+    req.flash('error', 'Please enter film information')
+    res.redirect('/loggedinhome')
+  }
 });
 
 router.get('/login', function(req, res, next) {

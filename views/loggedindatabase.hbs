@@ -4,13 +4,18 @@
 
 <div class="film-list">
 
-  {{#each film}}
-    <h3>{{this.name}}</h3>
-    <p><a href="/filmInfo/{{this.id}}">{{this.name}}</a></p>
+  {{#if Film}}
+    <ul>
+      {{#each filmInfo}}
+        <li>
+          <a href="../filmInfo/{{this.id}}">{{this.name}}</a>
+        </li>
+      {{/each}}
+    </ul>
   {{else}}
     <p>No films listed in the database</p>
-  {{/each}}
+  {{/if}}
 
 </div>
 
-<p><a href='/loggedinhome'>Homepage</a></p>
+<p><a href="/loggedinhome">Homepage</a></p>
