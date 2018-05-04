@@ -20,8 +20,12 @@ router.get('/signup', function(req, res, next) {
   res.render('signup');
 });
 
-router.get('/database', function(req, res, nexr) {
+router.get('/database', function(req, res, next) {
   res.render('database')
+});
+
+router.get('/loggedindatabase', function(req, res, next) {
+  res.render('loggedindatabase')
 })
 
 router.post('/login', passport.authenticate('local-login', {
@@ -59,7 +63,7 @@ router.get('/logout', function(req, res, next) {
 });
 
 router.get('/loggedinhome', function(req, res, next) {
-  res.render('index', { title: 'Nate\'s Film Site' });
+  res.render('loggedinhome', { title: 'Nate\'s Film Site' });
 });
 
 module.exports = router;
