@@ -4,18 +4,22 @@
 
 <div class="film-list">
 
-  {{#if Film}}
-    <ul>
-      {{#each filmInfo}}
-        <li>
-          <a href="../filmInfo/{{this.id}}">{{this.name}}</a>
-        </li>
-      {{/each}}
-    </ul>
+  {{#each films}}
+    <p>
+      <form class="delete-form" action="/delete" method="POST">
+        <a class="filmTitles" href="/film/{{this.id}}">{{this.filmTitle}}</a>
+        <input class="delete-button" type="submit" name="delete" value="Delete">
+        <input type="hidden" name="_id" value="{{this._id}}">
+      </form>
+    </p>
   {{else}}
-    <p>No films listed in the database</p>
-  {{/if}}
+    <p>There are no films on this site</p>
+  {{/each}}
 
 </div>
 
-<p><a href="/loggedinhome">Homepage</a></p>
+<p>
+  <a class="Homepage" href="/loggedinhome">Homepage</a>
+  <a class="Personal" href='/secret'>Personal Page</a>
+</p>
+<p><a class="Logout" href='/logout'>Log out</a></p>

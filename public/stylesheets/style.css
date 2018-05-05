@@ -1,11 +1,14 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-image: url("http://www.hull.ac.uk/editor-assets/images/Film-Studies/flimstudies2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 a {
   color: white;
-  background-color: black;
+  background-color: #970A0A;
 }
 
 h2{
@@ -14,4 +17,44 @@ h2{
 
 h1{
   color: blue;
+}
+
+.filmTitles{
+  font-weight: bold;
+  font-size: 200%;
+}
+
+.film-title{
+  color: #FEBB02;
+  font-size: 500%;
+}
+
+.film-synopsis{
+  color: #01FEED;
+  font-size: 200%;
+  background-color: black;
+}
+
+p{
+  color: #01FEAA;
+}
+
+button{
+  color: white;
+  background-color: #7F057B;
+}
+
+textarea{
+  color: #A9A9A9;
+  font-weight: bold;
+  background-image: url("https://cdn20.patchcdn.com/users/22924509/20180216/120323/styles/T800x600/public/processed_images/shutterstock_1024865878-1518800541-9613.jpg")
+}
+
+.delete-button{
+  color: white;
+  background-color: #7F057B;
+}
+
+form{
+  color: white;
 }
