@@ -1,6 +1,6 @@
 body {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 20px "Lucida Grande", Helvetica, Arial, sans-serif;
   background-image: url("http://www.hull.ac.uk/editor-assets/images/Film-Studies/flimstudies2.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -27,6 +27,10 @@ h1{
 .film-title{
   color: #FEBB02;
   font-size: 500%;
+}
+
+.add-film{
+  font-size: 75%;
 }
 
 .film-synopsis{
@@ -67,4 +71,9 @@ form{
 .signup{
   color: #11EFE7;
   background-color: #058D0E;
+}
+
+.links{
+  position: absolute;
+  bottom: 0;
 }

@@ -8,15 +8,16 @@
   <form method='POST' action='/addFilm'>
     Film Title:     <input name="filmTitle">        <br>
     Film Synopsis:  <textarea name="filmSynopsis" rows="10" cols="60"></textarea>  <br>
-    <button type='submit'>Add Film</button>
+    <button class="add-film" type='submit'>Add Film</button>
   </form>
 </div>
 
-<h2>The link below will take you to the datbase of films added</h2>
-
 <p>
-  <a class="Database" href='/loggedindatabase'>Database</a>
-  <a class="Personal" href='/secret'>Personal</a>
+<h2>The link below will take you to the datbase of films added</h2>
 </p>
 
-<p><a class="Logout" href='/logout'>Log out</a></p>
+<p class="links">
+  <a class="Database" href='/loggedindatabase'>Database</a>
+  <a class="Personal" href='/secret'>Personal</a>
+  <a class="Logout" href='/logout'>Log out</a>
+</p>
